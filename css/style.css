@@ -1,0 +1,123 @@
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex > * {
+    flex: 1;
+}
+.text-center {
+    text-align: center;
+}
+
+input[type='range'] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: 3px solid #000;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.vrk-color {
+    height: 100vh;
+    background: #212121;
+    position: relative;
+    float: left;
+    width: 80%;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.vrk-color-config {
+    background: #212121;
+    width: 20%;
+    float: left;
+    height: 100vh;
+}
+
+.vrk-color-config .flex > * {
+    padding: 20px 15px;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+    /* margin-top: -14px; You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #fff;
+    cursor: pointer;
+  }
+
+  .vrk-color-config h3 {
+    color: #fff;
+    text-align: left;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+  }
+
+  .arrow-button  {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+  }
+
+  .arrow-button > span {
+    display: inline-block;
+    border: 3px solid #000000;
+    border-radius: 3px;
+    cursor: pointer;
+    border-right: none;
+  }
+
+  .arrow-button span span {
+    float: left;
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+    border-right: 3px solid #000000;
+    background: #000;
+    color: #fff;
+
+  }
