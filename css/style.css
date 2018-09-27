@@ -33,6 +33,8 @@ input[type='range'] {
 
 body {
     margin: 0;
+    font-family: 'PT Sans', sans-serif;
+
 }
 
 * {
@@ -93,19 +95,21 @@ input[type=range]::-webkit-slider-thumb {
     text-align: left;
     margin: 0 0 10px;
     text-transform: uppercase;
+    font-size: 16px;
   }
 
   .arrow-button  {
     position: absolute;
     bottom: 15px;
     right: 15px;
-    padding: 10px 20px;
+    padding: 2px;
     font-size: 20px;
+    border: 2px solid #fff;
+    z-index: 1;
   }
 
   .arrow-button > span {
-    display: inline-block;
-    border: 3px solid #000000;
+  
     border-radius: 3px;
     cursor: pointer;
     border-right: none;
@@ -120,4 +124,51 @@ input[type=range]::-webkit-slider-thumb {
     background: #000;
     color: #fff;
 
+  }
+
+  h3 span {
+      float: right;
+  }
+
+  .vrk-color-row {
+      position: relative;
+  }
+  .vrk-color-row input {
+    color: #fff;
+    background: #00000080;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 200px;
+    height: 50px;
+    line-height: 46px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'PT Sans', sans-serif;
+
+  }
+
+  .copied {
+    position: absolute;
+    background: rgba(33, 33, 33, 0.88);
+    width: 200px;
+    top: 25px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 22px;
+    color: #fff;
+    right: 25px;
+    border-radius: 4px;
+  }
+
+  .flex + h2 {
+    background: #F44336;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 17px;
   }

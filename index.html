@@ -2,22 +2,19 @@
 <html>
     <head>
         <title>VRK Color Generator</title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/style.css"/>
     </head>
     <body>
         <div class="vrk-color">
             <div class="vrk-color-row"  style="background:rgb(64, 191, 191);height: 100vh">
-                
+                <input class="color" id="vrk-input-1" onclick="copyColor(this)" value="rgb(64, 191, 191)" readonly>
             </div>
             <div class="arrow-button">
                 <span>
                         <span class="up-arrow"><i class="fas fa-angle-up"></i></span>
                         <span class="down-arrow"><i class="fas fa-angle-down"></i></span>
-                </span>
-                <span>
-                        <span class="left-arrow"><i class="fas fa-angle-left"></i></span>
-                        <span class="right-arrow"><i class="fas fa-angle-right"></i></span>
                 </span>
             </div>
         </div>
@@ -30,16 +27,31 @@
                 </div>
                 <div class="flex">
                 <div>
-                    <h3>Saturation</h3>
-                    <input type="range" id="saturation-range" step=".001" max="1" style="background-image: linear-gradient(90deg, rgb(109, 109, 109), rgb(64, 191, 191));"/>
+                    <h3>Saturation <span>50%</span></h3>
+                    <input type="range" id="saturation-range" value="0.5" step=".001" max="1" style="background-image: linear-gradient(90deg, rgb(109, 109, 109), rgb(64, 191, 191));"/>
                 </div>
                 </div>
                 <div class="flex">
                 <div>
-                    <h3>Lightness</h3>
-                    <input type="range" id="lightness-range" max="1" step=".001" style="background-image: linear-gradient(90deg, rgb(33, 18, 31), rgb(64, 191, 191), rgb(237, 222, 235));"/>
+                    <h3>Lightness <span>50%</span></h3>
+                    <input type="range" value="0.5" id="lightness-range" max="1" step=".001" style="background-image: linear-gradient(90deg, rgb(33, 18, 31), rgb(64, 191, 191), rgb(237, 222, 235));"/>
                 </div>
             </div>
+
+            <h2>ROW COLOR SHIFT</h2>
+            <div class="flex">
+                    <div>
+                        <h3>Saturation <span>-10%</span></h3>
+                        <input type="range" id="row-saturation-range" value="0.0978" min="-0.2" max="0.2" step=".0001" style="background: #000;"/>
+                    </div>
+                </div>
+
+                <div class="flex">
+                        <div>
+                            <h3>Lightness <span>-10%</span></h3>
+                            <input type="range" id="row-lightness-range" value="0.0978" min="-0.2" max="0.2" step=".0001" style="background: #000;"/>
+                        </div>
+                    </div>
         </div>
         <script src="./js/jquery.min.js"></script>
         <script src="./js/script.js"></script>
